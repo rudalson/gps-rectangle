@@ -7,6 +7,7 @@ import {
   Polygon,
   Polyline,
 } from 'google-maps-react';
+const GOOGLE_MAP_API_KEY = process.env.GOOGLE_MAP_API_KEY;
 
 const MapContainer = (props) => {
   const [markers, setMarkers] = useState([]);
@@ -243,5 +244,5 @@ const MapContainer = (props) => {
 };
 
 export default GoogleApiWrapper({
-  apiKey: 'Google-Map-API-Key',
+  apiKey: GOOGLE_MAP_API_KEY,
 })(MapContainer);
